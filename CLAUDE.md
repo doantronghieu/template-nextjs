@@ -37,5 +37,11 @@ pnpm dlx shadcn@latest add <component-name>
 - Pattern: `useForm<T>({ resolver: zodResolver(schema) })` with type inference
 - Examples: `src/components/examples/*-form.tsx` for reference patterns
 
+## Logging
+- **Pino**: Server-side structured logging with `@/lib/logger`
+- Dev: Pretty-printed with colors via pino-pretty
+- Prod: JSON structured logs with configurable level (default: info)
+- Usage: `logger.info()`, `logger.error()`, `logger.debug()`, `logger.warn()`
+
 ## Utilities
 - `cn()` helper in `@/lib/utils` for className merging (clsx + tailwind-merge)
