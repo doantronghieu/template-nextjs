@@ -6,6 +6,14 @@
 - **Icon Library**: Lucide React
 - **Component Path**: `@/components/ui`
 
+## State Management
+- **TanStack Query**: Server state management (queries/mutations)
+- **Zustand**: Client state management (hooks-based, no providers needed)
+
+## Data Fetching
+- TanStack Query configured in `@/providers/query-provider` with 60s stale time
+- Store pattern: `src/stores/*.ts` for Zustand stores
+
 ## Adding Components
 ```bash
 pnpm dlx shadcn@latest add <component-name>
