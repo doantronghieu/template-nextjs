@@ -31,5 +31,11 @@ pnpm dlx shadcn@latest add <component-name>
 - Utilities: `@/lib/zod` (common patterns, response schemas, safeParse helper)
 - Schemas: `src/schemas/*.schema.ts` for domain schemas
 
+## Forms
+- **React Hook Form**: Form state management with `@hookform/resolvers/zod` for Zod integration
+- **shadcn/ui Form**: Accessible form components with built-in error handling
+- Pattern: `useForm<T>({ resolver: zodResolver(schema) })` with type inference
+- Examples: `src/components/examples/*-form.tsx` for reference patterns
+
 ## Utilities
 - `cn()` helper in `@/lib/utils` for className merging (clsx + tailwind-merge)
