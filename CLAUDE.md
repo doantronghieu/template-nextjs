@@ -6,6 +6,13 @@
 - **Icon Library**: Lucide React
 - **Component Path**: `@/components/ui`
 
+## Authentication
+- **Clerk**: Authentication and user management using `@clerk/nextjs`
+- Middleware: `src/middleware.ts` with `clerkMiddleware()` (App Router)
+- Provider: `<ClerkProvider>` wraps app in `src/app/layout.tsx`
+- Components: `<SignInButton>`, `<SignUpButton>`, `<UserButton>`, `<SignedIn>`, `<SignedOut>`
+- Environment: Requires `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY` in `.env.local`
+
 ## State Management
 - **TanStack Query**: Server state management (queries/mutations)
 - **Zustand**: Client state management (hooks-based, no providers needed)
