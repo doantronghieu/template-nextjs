@@ -19,5 +19,10 @@
 pnpm dlx shadcn@latest add <component-name>
 ```
 
+## Validation
+- **Zod**: TypeScript-first schema validation with type inference
+- Utilities: `@/lib/zod` (common patterns, response schemas, safeParse helper)
+- Schemas: `src/schemas/*.schema.ts` for domain schemas
+
 ## Utilities
 - `cn()` helper in `@/lib/utils` for className merging (clsx + tailwind-merge)
