@@ -1,16 +1,11 @@
-import {
-  ClerkProvider,
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  SignUpButton,
-  UserButton,
-} from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { QueryProvider } from "@/providers/query-provider";
 import { RefineProvider } from "@/providers/refine-provider";
-import { Button } from "@/components/ui/button";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
+import { AppHeader } from "@/components/app-header";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -41,31 +36,16 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <header className="flex justify-end items-center p-4 gap-2 sm:gap-4 h-16 border-b">
-            <SignedOut>
-              <SignInButton>
-                <Button variant="outline" size="default" className="rounded-full sm:h-10 sm:px-5">
-                  Sign In
-                </Button>
-              </SignInButton>
-              <SignUpButton>
-                <Button size="default" className="rounded-full sm:h-10 sm:px-5 bg-[#6c47ff] hover:bg-[#5a3ad1]">
-                  Sign Up
-                </Button>
-              </SignUpButton>
-            </SignedOut>
-            <SignedIn>
-              <UserButton
-                appearance={{
-                  elements: {
-                    avatarBox: "h-9 w-9 sm:h-10 sm:w-10 cursor-pointer hover:opacity-90 transition-opacity"
-                  }
-                }}
-              />
-            </SignedIn>
-          </header>
           <QueryProvider>
-            <RefineProvider>{children}</RefineProvider>
+            <RefineProvider>
+              <SidebarProvider>
+                <AppSidebar />
+                <main className="flex flex-1 flex-col w-full">
+                  <AppHeader />
+                  <div className="flex-1">{children}</div>
+                </main>
+              </SidebarProvider>
+            </RefineProvider>
           </QueryProvider>
         </body>
       </html>

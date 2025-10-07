@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="flex h-[calc(100vh-4rem)] items-center justify-center">
+    <div className="flex h-full items-center justify-center p-8">
       <main className="mx-auto max-w-3xl space-y-6 text-center">
         <h1 className="text-5xl font-bold tracking-tight sm:text-7xl">
           Welcome

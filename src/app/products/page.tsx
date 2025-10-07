@@ -14,7 +14,7 @@ export default function ProductsListPage() {
   }
 
   return (
-    <div className="p-8 h-[calc(100vh-4rem)] flex flex-col">
+    <div className="p-8 h-full flex flex-col">
       <div className="flex justify-between items-center mb-6 flex-shrink-0">
         <h1 className="text-3xl font-bold">Products</h1>
         <Link
