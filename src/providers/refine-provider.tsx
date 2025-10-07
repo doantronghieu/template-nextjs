@@ -18,7 +18,7 @@ export function RefineProvider({ children }: { children: ReactNode }) {
           name: "products",
           list: "/products",
           show: "/products/:id",
-          create: "/products/create",
+          create: "/products/:id",
           edit: "/products/:id/edit",
         },
       ]}
