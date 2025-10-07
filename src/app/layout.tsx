@@ -10,6 +10,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { QueryProvider } from "@/providers/query-provider";
 import { RefineProvider } from "@/providers/refine-provider";
+import { Button } from "@/components/ui/button";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -40,20 +41,27 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <header className="flex justify-end items-center p-4 gap-4 h-16">
+          <header className="flex justify-end items-center p-4 gap-2 sm:gap-4 h-16 border-b">
             <SignedOut>
-              <SignInButton />
+              <SignInButton>
+                <Button variant="outline" size="default" className="rounded-full sm:h-10 sm:px-5">
+                  Sign In
+                </Button>
+              </SignInButton>
               <SignUpButton>
-                <button
-                  type="button"
-                  className="bg-[#6c47ff] text-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer"
-                >
+                <Button size="default" className="rounded-full sm:h-10 sm:px-5 bg-[#6c47ff] hover:bg-[#5a3ad1]">
                   Sign Up
-                </button>
+                </Button>
               </SignUpButton>
             </SignedOut>
             <SignedIn>
-              <UserButton />
+              <UserButton
+                appearance={{
+                  elements: {
+                    avatarBox: "h-9 w-9 sm:h-10 sm:w-10 cursor-pointer hover:opacity-90 transition-opacity"
+                  }
+                }}
+              />
             </SignedIn>
           </header>
           <QueryProvider>
