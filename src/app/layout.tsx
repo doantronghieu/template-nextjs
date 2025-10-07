@@ -38,9 +38,9 @@ export default function RootLayout({
         >
           <QueryProvider>
             <RefineProvider>
-              <SidebarProvider>
+              <SidebarProvider className="h-full">
                 <AppSidebar />
-                <main className="flex flex-1 flex-col w-full">
+                <main className="flex flex-1 flex-col w-full h-full">
                   <AppHeader />
                   <div className="flex-1">{children}</div>
                 </main>
