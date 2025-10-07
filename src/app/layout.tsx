@@ -9,6 +9,7 @@ import {
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { QueryProvider } from "@/providers/query-provider";
+import { RefineProvider } from "@/providers/refine-provider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -53,7 +54,9 @@ export default function RootLayout({
               <UserButton />
             </SignedIn>
           </header>
-          <QueryProvider>{children}</QueryProvider>
+          <QueryProvider>
+            <RefineProvider>{children}</RefineProvider>
+          </QueryProvider>
         </body>
       </html>
     </ClerkProvider>

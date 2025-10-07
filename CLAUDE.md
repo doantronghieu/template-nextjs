@@ -21,6 +21,15 @@
 - TanStack Query configured in `@/providers/query-provider` with 60s stale time
 - Store pattern: `src/stores/*.ts` for Zustand stores
 
+## Refine Framework
+- **Refine**: Framework for building admin panels, dashboards, and internal tools
+- Provider: `<RefineProvider>` wraps app in `src/app/layout.tsx`
+- Router: `@refinedev/nextjs-router` for Next.js App Router integration
+- Data Provider: `@refinedev/simple-rest` (configurable via `NEXT_PUBLIC_API_URL`)
+- Form Integration: `@refinedev/react-hook-form` with Zod validation
+- Components: Refine-specific shadcn/ui components in `@/components/refine-ui`
+- Example: See `src/app/products` for CRUD operations reference
+
 ## Adding Components
 ```bash
 pnpm dlx shadcn@latest add <component-name>
