@@ -1,0 +1,99 @@
+---
+title: Prompt Engineering Fundamentals
+description: Master the core principles of effective prompt engineering for AI interactions
+published: true
+order: 1
+category:
+  title: Prompt Engineering
+  slug: prompt-engineering
+tags:
+  - prompt-engineering
+  - fundamentals
+  - ai
+---
+
+# Prompt Engineering Fundamentals
+
+Effective prompt engineering is the art of crafting clear, specific instructions that guide AI models to produce desired outputs.
+
+## Core Principles
+
+### 1. Be Specific and Clear
+
+Vague prompts yield vague results. Specify exactly what you want.
+
+**Poor:**
+```text
+Write about hotels
+```
+
+**Better:**
+```text
+Write a 200-word description of a luxury beachfront hotel
+highlighting amenities, location benefits, and target guests.
+```
+
+### 2. Provide Context
+
+Give the AI relevant background information.
+
+```text
+Context: You're a hotel revenue manager analyzing Q4 2024 data.
+Task: Identify 3 pricing optimization opportunities based on
+current occupancy rates and competitor analysis.
+```
+
+### 3. Use Examples (Few-Shot Prompting)
+
+Show the AI the desired output format.
+
+```text
+Create guest welcome messages following this style:
+
+Example: "Welcome, Sarah! Your ocean-view suite on the 12th
+floor awaits. Complimentary champagne is chilled and ready."
+
+Now create one for: John, Presidential Suite, 20th floor,
+business traveler.
+```
+
+### 4. Specify Format and Constraints
+
+Define length, structure, and style requirements.
+
+```text
+Create a 3-bullet summary of our spa services:
+- Each bullet max 15 words
+- Focus on unique selling points
+- Professional yet warm tone
+```
+
+## Prompt Structure Template
+
+```text
+Role: [Who the AI should be]
+Context: [Relevant background]
+Task: [What to do]
+Format: [How to present it]
+Constraints: [Limitations or requirements]
+```
+
+## Common Mistakes to Avoid
+
+- **Overloading**: Too many instructions confuse the model
+- **Ambiguity**: Unclear expectations lead to inconsistent results
+- **Missing context**: AI can't read your mind—be explicit
+- **No validation**: Always review and refine outputs
+
+## Best Practices
+
+1. **Iterate**: Refine prompts based on results
+2. **Test variations**: Small changes can significantly impact output
+3. **Use delimiters**: Separate sections with `---` or `###`
+4. **Specify tone**: Professional, casual, technical, friendly
+
+## Next Steps
+
+Apply these fundamentals to specific domains:
+- [Hotel Sales Use Cases](/docs/prompt-engineering/use-cases/hotel-sales)
+- [Hotel Marketing Use Cases](/docs/prompt-engineering/use-cases/hotel-marketing)

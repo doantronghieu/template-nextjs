@@ -32,15 +32,15 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <QueryProvider>
             <RefineProvider>
-              <SidebarProvider className="h-full">
+              <SidebarProvider className="min-h-screen">
                 <AppSidebar />
-                <main className="flex flex-1 flex-col w-full h-full">
+                <main className="flex flex-1 flex-col w-full">
                   <AppHeader />
                   <div className="flex-1">{children}</div>
                 </main>

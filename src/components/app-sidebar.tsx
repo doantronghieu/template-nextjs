@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronRight, Home, Package, Settings } from "lucide-react";
+import { BookOpen, ChevronRight, Home, Package, Settings } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import * as React from "react";
@@ -29,6 +29,11 @@ const navigation = [
     title: "Home",
     href: "/",
     icon: Home,
+  },
+  {
+    title: "Documentation",
+    href: "/docs",
+    icon: BookOpen,
   },
   {
     title: "Products",
