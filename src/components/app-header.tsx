@@ -40,10 +40,7 @@ export function AppHeader() {
               </Button>
             </SignInButton>
             <SignUpButton>
-              <Button
-                size="default"
-                className="rounded-full sm:h-10 sm:px-5 bg-[#6c47ff] hover:bg-[#5a3ad1]"
-              >
+              <Button size="default" className="rounded-full sm:h-10 sm:px-5">
                 Sign Up
               </Button>
             </SignUpButton>

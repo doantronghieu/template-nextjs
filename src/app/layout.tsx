@@ -31,7 +31,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        variables: {
+          colorPrimary: "oklch(var(--primary))",
+          colorBackground: "oklch(var(--background))",
+          colorText: "oklch(var(--foreground))",
+          colorInputBackground: "oklch(var(--background))",
+          colorInputText: "oklch(var(--foreground))",
+          borderRadius: "var(--radius)",
+        },
+      }}
+    >
       <html lang="en" suppressHydrationWarning>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
