@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import {
   SignedIn,
   SignedOut,
@@ -9,9 +8,10 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 import { Home } from "lucide-react";
-import { SidebarTrigger } from "@/components/ui/sidebar";
-import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 
 export function AppHeader() {
   return (

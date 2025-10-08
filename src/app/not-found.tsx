@@ -1,15 +1,15 @@
 "use client";
 
+import { ArrowLeft, FileQuestion, Home } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { FileQuestion, Home, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardHeader,
-  CardTitle,
   CardDescription,
   CardFooter,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 
 export default function NotFound() {
