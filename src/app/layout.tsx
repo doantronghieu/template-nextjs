@@ -1,6 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Toaster } from "sonner";
 import { AppHeader } from "@/components/app-header";
 import { AppSidebar } from "@/components/app-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
@@ -58,6 +59,7 @@ export default function RootLayout({
               </SidebarProvider>
             </RefineProvider>
           </QueryProvider>
+          <Toaster />
         </body>
       </html>
     </ClerkProvider>
