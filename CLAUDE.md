@@ -5,6 +5,7 @@
 - **Style**: New York variant with CSS variables
 - **Icon Library**: Lucide React
 - **Component Path**: `@/components/ui`
+- **Animations**: Framer Motion
 
 ## Authentication
 - **Clerk**: Authentication and user management using `@clerk/nextjs`
