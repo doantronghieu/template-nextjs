@@ -21,6 +21,9 @@
 ## Data Fetching
 - TanStack Query configured in `@/providers/query-provider` with 60s stale time
 - Store pattern: `src/stores/*.ts` for Zustand stores
+- **TypeScript Client**: Generate from FastAPI OpenAPI schema via `make client-generate` → `src/client/` (types + services), configured with `NEXT_PUBLIC_API_URL` from `@/config`
+  - Use generated SDK functions and types from `@/lib/api-client` for all backend interactions
+  - Regenerate client after backend schema changes to sync types and API functions
 
 ## Refine Framework
 - **Refine**: Framework for building admin panels, dashboards, and internal tools

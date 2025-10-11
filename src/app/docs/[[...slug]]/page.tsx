@@ -53,7 +53,6 @@ export async function generateMetadata({ params }: DocPageProps) {
   };
 }
 
-
 export default async function DocPage({ params }: DocPageProps) {
   const { slug = [] } = await params;
 

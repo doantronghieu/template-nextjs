@@ -32,11 +32,7 @@ export function CodeBlock({ children }: CodeBlockProps) {
         className="absolute right-2 top-2 h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity"
         onClick={handleCopy}
       >
-        {copied ? (
-          <Check className="h-4 w-4" />
-        ) : (
-          <Copy className="h-4 w-4" />
-        )}
+        {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
       </Button>
       <pre className="mb-4 mt-6 overflow-x-auto rounded-lg">{children}</pre>
     </div>

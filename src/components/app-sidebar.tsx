@@ -1,6 +1,13 @@
 "use client";
 
-import { BookOpen, ChevronRight, Home, Package, Settings } from "lucide-react";
+import {
+  BookOpen,
+  ChevronRight,
+  Home,
+  MessageSquare,
+  Package,
+  Settings,
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import * as React from "react";
@@ -47,6 +54,14 @@ const navigation = [
     title: "Settings",
     href: "/settings",
     icon: Settings,
+  },
+];
+
+const adminNavigation = [
+  {
+    title: "Conversations",
+    href: "/admin/conversations",
+    icon: MessageSquare,
   },
 ];
 
@@ -112,6 +127,24 @@ export function AppSidebar() {
                   </SidebarMenuItem>
                 );
               })}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupLabel>Admin</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {adminNavigation.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton asChild isActive={pathname === item.href}>
+                    <Link href={item.href}>
+                      <item.icon className="h-4 w-4" />
+                      <span>{item.title}</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
