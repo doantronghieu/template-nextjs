@@ -47,7 +47,7 @@ export function JsonViewer({ data, level = 0 }: JsonViewerProps) {
   }
 
   if (typeof data === "object") {
-    return <JsonObject data={data} level={level} />;
+    return <JsonObject data={data as Record<string, unknown>} level={level} />;
   }
 
   return <span>{String(data)}</span>;
