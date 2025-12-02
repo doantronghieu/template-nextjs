@@ -47,4 +47,6 @@ next-env.d.ts
 # contentlayer
 .contentlayer
 
-**/tmp
+**/tmp/*
+!**/tmp/sessions/
+**/plans
